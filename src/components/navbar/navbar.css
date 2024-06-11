@@ -1,0 +1,112 @@
+.navbar {
+    width: 100%;
+    min-height: 5.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: var(--main-color-alt);
+    z-index: 9999;
+    padding: 0 1rem;
+
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar_parent {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.navbar_parent li i {
+    margin: 0.2rem;
+}
+
+.navbar_parent li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn_menu {
+    font-size: 2rem;
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.logoNavMobile {
+    display: none;
+    color: var(--white);
+    font-size: 3rem;
+    gap: 1rem;
+}
+
+.navbar_mobile {
+    display: none;
+    flex-direction: column;
+    background: #122c91;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 1rem;
+    gap: 1.5rem;
+    transform: translate(-2000px, 0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar_mobile li {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .navbar_parent {
+        display: none;
+    }
+
+    .btn_menu {
+        display: block;
+    }
+
+    .btn_menu :nth-child(1) {
+        font-size: 3rem;
+    }
+
+    .navbar_mobile {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        opacity: 1;
+    }
+
+    .logoNavMobile {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+.magiaLogo{
+    height: 5rem;
+}
+.magiaLogoMobile{
+    height: 12rem;
+}

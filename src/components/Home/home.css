@@ -1,0 +1,122 @@
+.Home_sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    background: white;
+    background-image: url(../imgs/wave\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+.cardsParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.title {
+    height: 4.2rem;
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 50%;
+    background: var(--white);
+    right: 0;
+    bottom: -13%;
+    margin-top: 0.2rem;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 10%;
+    background: var(--white);
+    right: 0;
+    bottom: -2%;
+    margin-top: 2rem;
+}
+
+.title:hover::after {
+    animation: afterTitle 2s infinite;
+}
+
+.title:hover::before {
+    animation: beforeTitle 2s infinite;
+}
+
+@keyframes afterTitle {
+
+    0%,
+    100% {
+        width: 10%;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes beforeTitle {
+
+    0%,
+    100% {
+        width: 50%;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+
+.Home_sec2 {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sideBar {
+    height: 24rem;
+    overflow: auto;
+    width: 20rem;
+    padding-bottom: 1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: 10px;
+}
